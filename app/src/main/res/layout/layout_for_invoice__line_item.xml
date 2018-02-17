@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llInvoceTitles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvItemCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.99"
+            android:gravity="center"
+            android:text="Item Code"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvItemDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:text="Description"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvQty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="Qty"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvFreeQty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="Free Qty"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvUnitPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.95"
+            android:gravity="center"
+            android:text="Unit Price(Rs)"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLineValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.95"
+            android:gravity="center"
+            android:text="Line Value(Rs)"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvFreeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.95"
+            android:gravity="center"
+            android:text="Free Value(Rs)"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="0.95"
+            android:background="@color/md_amber_50"
+            android:gravity="center"
+            android:text="Line Value(Rs)"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0.2"
+        android:background="@color/colorSecondaryText" />
+
+</LinearLayout>
+

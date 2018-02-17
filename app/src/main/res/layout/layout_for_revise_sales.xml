@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="2dp">
+
+    <LinearLayout
+        android:id="@+id/llRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_50"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="247dp">
+
+        <TextView
+            android:id="@+id/tvSOID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="S.O. ID"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvMerchantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:layout_weight="0.5"
+            android:text="Direct Sale"
+            android:textAlignment="textStart"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvCreateDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:text="Create Date"
+            android:textAlignment="textStart"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/accent"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="View"
+            android:textAlignment="center"
+            android:textColor="@color/md_white_1000" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc" />
+
+</LinearLayout>
+

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bellvantage.scadd">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true"></supports-screens>
+
+    <application
+        android:name=".Utils.ApplicationContextProvider"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyTheme">
+
+        <!--
+        ================================================================================
+                        Activities
+        ================================================================================
+        -->
+        <!-- Sachika -->
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".WebAppActivity" />
+        <activity
+            android:name=".SyncSalesOrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MerchantUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MerchantRegistrer" />
+        <activity android:name=".SOR__ListItemActivity_Selected" />
+        <activity android:name=".PrimarySalesOrderActivity" />
+        <activity android:name=".MRA_UpdateActivity" />
+        <activity android:name=".JsonActivity" />
+        <activity android:name=".ReportsActivity" />
+        <activity android:name=".SO_ReviceSalesOrderavAtivity" />
+        <activity android:name=".MerchantActivity" />
+        <activity android:name=".SOR_ListItemActivity" />
+        <activity android:name=".SOR__ListItemActivity_AllSelected" />
+        <activity android:name=".ActivityCancelSalesOrders" />
+        <activity android:name=".ActivityCancelSalesOrderContinue" />
+        <activity
+            android:name=".ReturnActivty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SalesOrderToInvoice"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CreateInvoiceActivity" />
+        <activity android:name=".ReprintReturnNoteActivity" />
+        <activity android:name=".ReturnNoteActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".MyOutletListActivity" />
+        <activity android:name=".SalesOrderOfflineActivity" />
+        <activity
+            android:name=".MerchantLocation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".LocationViewrActivity" />
+        <activity android:name=".TargetAchievementActivity" />
+        <activity android:name=".EvaluationActivity" />
+        <activity android:name=".DailySummeryReportActivity" />
+        <activity android:name=".MileageActivty" />
+        <activity android:name=".AttendanceActivity" />
+
+        <!-- Isuru -->
+        <activity
+            android:name=".PrintInvoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IRA_DeviceList"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PrintReturnNoteActivity" />
+        <activity android:name=".CreateSalesOrder_PathMerchantSelect" />
+        <activity
+            android:name=".CreateSalesOrderContinue"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".CreateSalesOrderContinue0" />
+        <activity android:name=".SalesOrderActivity" />
+        <activity
+            android:name=".CreateSalesOrderLast"
+            android:theme="@style/Theme.MyThemeWithAB" />
+        <activity android:name=".ViewMerchantCard" />
+        <activity android:name=".LoginSyncActivityDrawer" />
+        <activity android:name=".ViewSalesrepStock" />
+        <activity android:name=".ViewRedyStock" />
+        <activity android:name=".ViewMerchantVisit" />
+        <activity android:name=".LoginSyncActivity" />
+        <activity android:name=".ViewPromotion" />
+        <activity
+            android:name=".MerchantInventoryCard"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".DailyPlanActivity" />
+        <activity android:name=".CreateSalesOrder_VisitReasonSelect" />
+
+        <!--
+        ================================================================================
+                        Services
+        ================================================================================
+        -->
+        <service android:name=".Services.GPS_Tracker" />
+
+        <receiver android:name=".Services.NetworkMonitor">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!--
+                placepicker
+            <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDQLvxNKFQgu3iLvBSZFbxhIc-M6uRybDk" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".ImageUploadPHPActivity"></activity>
+    </application>
+
+</manifest>

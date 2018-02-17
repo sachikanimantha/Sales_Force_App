@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bellvantage.scadd.SyncSalesOrdersActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        android:id="@+id/appBarLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:baselineAligned="false"
+        tools:layout_constraintRight_creator="1">
+
+        <android.support.v7.widget.Toolbar
+
+            android:id="@+id/tb_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="#ffffff"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.00999999"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llAll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitleReturnNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:text="All Sync"
+                    android:textColor="@color/md_white_1000" />
+
+                <LinearLayout
+                    android:id="@+id/llRNDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="All"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAllSyncDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Last Sync on  2017/09/02 12:23"
+                            android:textColor="@color/md_purple_300"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAllCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To Sync - 19" />
+
+                        <TextView
+                            android:id="@+id/tvAllSyncedCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Synced - 2" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="32dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/ic_sync" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorSecondaryText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSalesOrderRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:text="Sales Orders"
+                    android:textColor="@color/md_white_1000" />
+
+                <LinearLayout
+                    android:id="@+id/llNSODetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvsubSalesOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="New Sales Orders"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSOSyncDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Last Sync on  2017/09/02 12:23"
+                            android:textColor="@color/md_purple_300"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvSOCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To Sync - 19" />
+
+                        <TextView
+                            android:id="@+id/tvSOSyncedCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Synced - 2" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivSyncSalesOrders"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="32dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/ic_sync" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRSDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvsubReviseSalesOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Revised Sales Orders"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvRSSyncDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Last Sync on  2017/09/02 12:23"
+                            android:textColor="@color/md_purple_300"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvRSCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To Sync - 19" />
+
+                        <TextView
+                            android:id="@+id/tvRSSyncedCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Synced - 2" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivSyncReviseSalesOrders"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="32dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/ic_sync" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCCDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvsubRevi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Confirmed/ Canceled Sales Orders"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCCSyncDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Last Sync on  2017/09/02 12:23"
+                            android:textColor="@color/md_purple_300"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvCCCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To Sync - 19" />
+
+                        <TextView
+                            android:id="@+id/tvCCSyncedCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Synced - 2" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivSyncCanceledConfirmedSalesOrders"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="32dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/ic_sync" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vBottomLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorSecondaryText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llReturnNoteRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitleReturnNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:text="Retrun Note"
+                    android:textColor="@color/md_white_1000" />
+
+                <LinearLayout
+                    android:id="@+id/llRNDetails1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvSubReturnNote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Return Notes"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvRNSyncDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Last Sync on  2017/09/02 12:23"
+                            android:textColor="@color/md_purple_300"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvRNCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To Sync - 19" />
+
+                        <TextView
+                            android:id="@+id/tvRNSyncedCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Synced - 2" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivSyncReturnNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="32dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/ic_sync" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorSecondaryText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llInvoiceRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitleInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:text="Invoice"
+                    android:textColor="@color/md_white_1000" />
+
+                <LinearLayout
+                    android:id="@+id/llIDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvSubInvoice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Invoice"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvIyncDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Last Sync on  2017/09/02 12:23"
+                            android:textColor="@color/md_purple_300"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvICount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To Sync - 19" />
+
+                        <TextView
+                            android:id="@+id/tvISyncedCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Synced - 2" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivInvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="32dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/ic_sync" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llIUDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvSubInvoiceUtilization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Invoice Utilization"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvIUSyncDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Last Sync on  2017/09/02 12:23"
+                            android:textColor="@color/md_purple_300"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvIUCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To Sync - 19" />
+
+                        <TextView
+                            android:id="@+id/tvIUSyncedCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Synced - 2" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivInvoiceUtilization"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center"
+                        android:layout_marginLeft="32dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/ic_sync" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/IUView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorSecondaryText" />
+            </LinearLayout>
+
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

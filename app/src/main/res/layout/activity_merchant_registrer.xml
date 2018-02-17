@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bellvantage.scadd.MerchantRegistrer">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                app:layout_constraintVertical_bias="0.073">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Merchant Registration"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="48dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="48dp"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="8dp">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/llMerchantName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivMerchantName"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_name" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilMerchantName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintLeft_toLeftOf="@+id/cardView2"
+                            app:layout_constraintRight_toRightOf="@+id/cardView2"
+                            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                            <EditText
+                                android:id="@+id/etMerchantName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:hint="Customer Name*"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="-200dp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llContactno1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivContactNo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_contact_1" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilContact1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintLeft_toLeftOf="@+id/cardView2"
+                            app:layout_constraintRight_toRightOf="@+id/cardView2"
+                            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                            <EditText
+                                android:id="@+id/etContactNo1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:hint="Contact Number 1*"
+                                android:inputType="number"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="-200dp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llContactNo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivContactNo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_contact_2" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilContact2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintLeft_toLeftOf="@+id/cardView2"
+                            app:layout_constraintRight_toRightOf="@+id/cardView2"
+                            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                            <EditText
+                                android:id="@+id/etContactNo2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:hint="Contact Number 2 *"
+                                android:inputType="number"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="-200dp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llContactPerson"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivContactPerson"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_contact_person" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilContactPerson"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintLeft_toLeftOf="@+id/cardView2"
+                            app:layout_constraintRight_toRightOf="@+id/cardView2"
+                            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                            <EditText
+                                android:id="@+id/etContactPerson"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:hint="Contact Person"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="-200dp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llBuildingNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivBuildingNO"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_building_no" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilBuildingNO"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintLeft_toLeftOf="@+id/cardView2"
+                            app:layout_constraintRight_toRightOf="@+id/cardView2"
+                            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                            <EditText
+                                android:id="@+id/etBuildingNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:hint="Building Number *"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="-200dp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAddress1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivAddress1"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_address" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilAddress1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintLeft_toLeftOf="@+id/cardView2"
+                            app:layout_constraintRight_toRightOf="@+id/cardView2"
+                            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                            <EditText
+                                android:id="@+id/etAddress1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:hint="Address 1 *"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="-200dp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAddress2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivAddress2"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_address_2" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilAddress2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintLeft_toLeftOf="@+id/cardView2"
+                            app:layout_constraintRight_toRightOf="@+id/cardView2"
+                            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                            <EditText
+                                android:id="@+id/etAddress2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:hint="Address 2 *"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="-200dp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                   <!-- <LinearLayout
+                        android:id="@+id/llPlacePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivPlacePicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_place_picker" />
+
+                        <TextView
+                            android:id="@+id/tvPlacePicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:text="Pick your location *"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/llCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_city" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintLeft_toLeftOf="@+id/cardView2"
+                            app:layout_constraintRight_toRightOf="@+id/cardView2"
+                            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                            <EditText
+                                android:id="@+id/etCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:hint="City"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="-200dp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llDistrictSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivDistrict"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_district" />
+
+                        <TextView
+                            android:id="@+id/tvDistrict"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:text="Select your district *"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_area" />
+
+                        <TextView
+                            android:id="@+id/tvArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:text="Select your area *"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                   <!-- <LinearLayout
+                        android:id="@+id/llMerchantClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivMerchantClass"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_class" />
+
+                        <TextView
+                            android:id="@+id/tvMerchantClass"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:text="Select a class *"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/llReferenceID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivReference"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_reference" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tilReference"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintLeft_toLeftOf="@+id/cardView2"
+                            app:layout_constraintRight_toRightOf="@+id/cardView2"
+                            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                            <TextView
+                                android:id="@+id/tvMerchantType"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="18dp"
+                                android:layout_weight="1"
+                                android:gravity="left|center"
+                                android:text="Select a type *"
+                                android:textSize="18sp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llVat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivVat"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_vat" />
+
+                        <LinearLayout
+                            android:id="@+id/llInnerVat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/cbVat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:text="Vat" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/tilVat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <EditText
+                                    android:id="@+id/etVat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="8dp"
+                                    android:hint="Vat Number"
+                                    android:inputType="number" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llCredit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivCredit"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_vat" />
+
+                        <LinearLayout
+                            android:id="@+id/llInnerCredit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/cbCredit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="8dp"
+                                android:text="Credit" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/tilCreidt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <EditText
+                                    android:id="@+id/etCredit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="8dp"
+                                    android:hint="Credit Days"
+                                    android:inputType="number" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llImage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivImage1Icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.69"
+                            app:srcCompat="@drawable/ic_image" />
+
+                        <TextView
+                            android:id="@+id/tvImage1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:text="Capture Image 1 *"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivImage1"
+                            android:src="@drawable/no_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llImage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivImage2Icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.69"
+                            app:srcCompat="@drawable/ic_image" />
+
+                        <TextView
+                            android:id="@+id/tvImage2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:layout_weight="1"
+                            android:gravity="left|center"
+                            android:text="Capture Image 2 *"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivImage2"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:src="@drawable/no_image"
+                            android:layout_weight="1" />
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="Register Customer"
+                        android:textAllCaps="false"
+                        android:textColor="@color/md_white_1000" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

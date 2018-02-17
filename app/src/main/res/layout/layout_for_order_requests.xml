@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/llLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/md_cyan_50"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="2dp">
+
+        <TextView
+            android:id="@+id/tvRequestNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_weight="1.1"
+            android:gravity="left"
+            android:text="S.O. ID"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="44dp" />
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginRight="4dp"
+
+            android:layout_weight="0.9"
+            android:gravity="left"
+            android:text="Customer"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="239dp" />
+
+        <TextView
+            android:id="@+id/tvCreatedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0.9"
+            android:gravity="left"
+            android:text="Created Date"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="321dp" />
+
+        <TextView
+            android:id="@+id/tvAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_weight="1.2"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="left"
+            android:paddingBottom="2dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="2dp"
+            android:text="View"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="530dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
